@@ -55,6 +55,11 @@ def get_ai_action():
     except Exception as e:
         print(f"Server error: {e}")
         return jsonify({"error": f"Internal server error: {str(e)}"}), 500
+    
+@app.route('/', methods=['GET'])
+def health_check():
+    return jsonify({"status": "ok", "message": "Vercel API proxy is running."}), 200
+
 
 if __name__ == '__main__':
     # This block is for local testing only
