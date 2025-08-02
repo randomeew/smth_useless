@@ -18,7 +18,7 @@ app = Flask(__name__)
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
 # --- Rate Limit Management for Vercel Function (Adjust as needed for Gemini limits) ---
-MIN_TIME_BETWEEN_LLM_CALLS_SERVER = 3.0 # Start with 3 seconds, adjust based on Gemini's rate limits
+MIN_TIME_BETWEEN_LLM_CALLS_SERVER = 6.0 # Start with 3 seconds, adjust based on Gemini's rate limits
 last_llm_call_time_server = 0
 
 @app.route('/api', methods=['GET'])
