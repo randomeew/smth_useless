@@ -15,7 +15,7 @@ openai.api_key =  os.getenv("OPENAI_API_KEY")
 MIN_TIME_BETWEEN_LLM_CALLS_SERVER = 3.0 # <--- ADD THIS (Adjust as needed for your specific OpenAI limit)
 last_llm_call_time_server = 0 # <--- ADD THIS
 
-@app.route('/api/get_ai_action', methods=['POST'])
+@app.route('/get_ai_action', methods=['POST'])
 def get_ai_action():
     global last_llm_call_time_server # <--- IMPORTANT: Declare global
 
