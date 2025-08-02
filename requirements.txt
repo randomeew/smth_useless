@@ -1,5 +1,6 @@
 Flask==3.1.1
 google-generativeai
+numpy
 Pillow
 annotated-types==0.7.0
 anyio==4.9.0
