@@ -65,7 +65,7 @@ def get_ai_action():
 
     try:
         # Initialize the Gemini Pro Vision model
-        model = genai.GenerativeModel('gemini-pro-vision')
+        model = genai.GenerativeModel('gemini-2.5-flash')
 
         # Generate content with safety settings
         response = model.generate_content(
