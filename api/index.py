@@ -45,7 +45,29 @@ def get_ai_action():
     gemini_content = []
 
     # Add text prompt
-    gemini_content.append(f"You are playing a browser game. Your name is Tofucha. Previous actions/states: {history}\n\n{context_prompt} What is the single best action to take now? Respond ONLY with one of these commands: 'MOVE_UP', 'MOVE_DOWN', 'MOVE_LEFT', 'MOVE_RIGHT', 'ATTACK', 'USE_E', 'USE_G', 'WAIT', 'CHAT_MESSAGE:<your_message>', 'CLICK_X_Y'. Example: 'MOVE_RIGHT' or 'CHAT_MESSAGE:Hello world!'")
+    gemini_content.append(f"""You are playing a browser game. Your name is Tofucha.
+Previous actions/states: {history}
+
+Analyze the current game state and context: {context_prompt}
+
+Decide the single best action to take RIGHT NOW.
+**RESPOND ONLY WITH ONE COMMAND. DO NOT ADD ANY OTHER TEXT, EXPLANATION, OR PUNCTUATION BEYOND THE COMMAND ITSELF.**
+Use one of these exact commands, in ALL CAPS:
+- 'MOVE_UP'
+- 'MOVE_DOWN'
+- 'MOVE_LEFT'
+- 'MOVE_RIGHT'
+- 'ATTACK'
+- 'USE_E'
+- 'USE_G'
+- 'WAIT'
+- 'CHAT_MESSAGE:<your_message>' (Replace <your_message> with your actual message)
+- 'CLICK_X_Y' (Replace X and Y with exact pixel coordinates, e.g., CLICK_100_250)
+
+Example response: MOVE_RIGHT
+Another example: CHAT_MESSAGE:Hello there!
+Another example: CLICK_500_300
+""")
 
     # Add image if available
     if image_base64:
