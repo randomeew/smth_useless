@@ -14,7 +14,7 @@ from google.generativeai.types import HarmCategory, HarmBlockThreshold
 app = Flask(__name__)
 
 # --- Configure Gemini API ---
-# Ensure GEMINI_API_KEY is set in Vercel environment variables
+# Ensure GEMINI_API_KEY is set in Vercel environment variables 
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
 # --- Rate Limit Management for Vercel Function (Adjust as needed for Gemini limits) ---
