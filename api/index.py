@@ -8,7 +8,7 @@ from PIL import Image
 
 app = Flask(__name__)
 
-# Load API key from environment variable (CRUCIAL FOR VERECEL) 
+# Load API key from environment variable (CRUCIAL FOR VERECEL)
 # Set OPENAI_API_KEY in your Vercel project settings 
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
