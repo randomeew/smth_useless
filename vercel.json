@@ -1,7 +1,4 @@
 {
-  "functions": {
-    "api/index.py": {}
-  },
   "routes": [
     {
       "src": "/api/get_ai_action",
