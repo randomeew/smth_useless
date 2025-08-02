@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 # Load API key from environment variable (CRUCIAL FOR VERECEL) 
 # Set OPENAI_API_KEY in your Vercel project settings 
-openai.api_key = "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"#os.getenv("OPENAI_API_KEY")
+openai.api_key = "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" #os.getenv("OPENAI_API_KEY")
 
 @app.route('/get_ai_action', methods=['POST'])
 def get_ai_action():
